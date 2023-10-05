@@ -37,3 +37,23 @@ div a {
   border-left: 4px #4d9ff8 solid;
   border-radius: 50%;
 }
+
+@media only screen and (min-width: 600px) {
+  .logo {
+    display: flex;
+  }
+  .logo-sm {
+    display: none;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .logo {
+    display: none;
+  }
+  .logo-sm {
+    display: flex;
+  }
+  .nav-name {
+    display: none;
+  }
+}

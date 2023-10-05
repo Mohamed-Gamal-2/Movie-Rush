@@ -8,6 +8,14 @@
         >Movie-Rush</a
       >
     </div>
+    <div class="logo-sm">
+      <a
+        class="navbar-brand ps-3"
+        routerLink="/home"
+        routerLinkActive="active-route"
+        ><i class="fa-solid fa-house" style="color: #ffffff"></i
+      ></a>
+    </div>
     <div class="rest">
       <div class="d-flex flex-column">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -19,7 +27,7 @@
               routerLink="/movies"
             >
               <i class="fa-solid fa-film me-2" style="color: #ffffff"></i
-              >Movies</a
+              ><span class="nav-name">Movies</span></a
             >
           </li>
           <li class="nav-item">
@@ -29,8 +37,8 @@
               routerLinkActive="active-route"
               routerLink="/tvshows"
             >
-              <i class="fa-solid fa-video me-2" style="color: #ffffff"></i>TV
-              Shows</a
+              <i class="fa-solid fa-video me-2" style="color: #ffffff"></i>
+              <span class="nav-name">TV Shows</span></a
             >
           </li>
           <li class="nav-item">
@@ -41,7 +49,7 @@
               routerLink="/watchlist"
             >
               <i class="fa-solid fa-bookmark me-2" style="color: #ffffff"></i
-              >Watchlist</a
+              ><span class="nav-name">Watchlist</span></a
             >
             <span class="counter">{{ counter }}</span>
           </li>

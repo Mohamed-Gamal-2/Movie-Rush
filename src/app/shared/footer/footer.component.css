@@ -26,3 +26,9 @@ a:hover {
 .social-media a:hover {
   transform: scale(1.2);
 }
+
+@media only screen and (max-width: 600px) {
+  .social-media {
+    width: 100%;
+  }
+}

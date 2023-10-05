@@ -7,13 +7,37 @@
     </div>
   </div>
 
-  <nav aria-label="...">
+  <nav aria-label="..." class="pag-1">
     <ul class="pagination justify-content-center">
       <li class="page-item" [ngClass]="{ disabled: pageNum == 1 }">
         <a class="page-link" (click)="previous()">Previous</a>
       </li>
       <li
         *ngFor="let page of pagesArr"
+        class="page-item"
+        [ngClass]="{ activated: page == pageNum }"
+      >
+        <a class="page-link" (click)="paginate(page)">{{ page }}</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link disabled" [ngClass]="{ activated: pageNum > 20 }"
+          >...</a
+        >
+      </li>
+
+      <li class="page-item" [ngClass]="{ disabled: pageNum == maxPages }">
+        <a class="page-link" (click)="next()">Next</a>
+      </li>
+    </ul>
+  </nav>
+
+  <nav aria-label="..." class="pag-2">
+    <ul class="pagination justify-content-center">
+      <li class="page-item" [ngClass]="{ disabled: pageNum == 1 }">
+        <a class="page-link" (click)="previous()">Previous</a>
+      </li>
+      <li
+        *ngFor="let page of pagesArrsm"
         class="page-item"
         [ngClass]="{ activated: page == pageNum }"
       >

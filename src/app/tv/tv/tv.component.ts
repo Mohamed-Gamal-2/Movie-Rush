@@ -9,6 +9,8 @@ import { TVAPIService } from '../services/tvapi.service';
 export class TVComponent {
   shows: any[] = [];
   pagesArr = new Array(20).fill(0).map((c, i) => i + 1);
+  pagesArrsm = new Array(5).fill(0).map((c, i) => i + 1);
+
   pageNum = 1;
   maxPages = 0;
   constructor(private _API: TVAPIService) {}

@@ -28,3 +28,22 @@ section {
   );
   padding-bottom: 30px;
 }
+
+@media only screen and (max-width: 1000px) {
+  .pag-1 {
+    display: none;
+  }
+
+  .pag-2 {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .pag-1 {
+    display: block;
+  }
+
+  .pag-2 {
+    display: none;
+  }
+}

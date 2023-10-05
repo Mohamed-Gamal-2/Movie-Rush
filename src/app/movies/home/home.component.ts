@@ -10,6 +10,7 @@ import { WatchlistAPIService } from 'src/app/watchlist/services/watchlist-api.se
 export class HomeComponent {
   movies: any[] = [];
   pagesArr = new Array(20).fill(0).map((c, i) => i + 1);
+  pagesArrsm = new Array(5).fill(0).map((c, i) => i + 1);
   pageNum = 1;
   maxPages = 0;
   counter = 0;

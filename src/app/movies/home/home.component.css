@@ -1,0 +1,32 @@
+section {
+  background: radial-gradient(
+    circle at 100%,
+    #333,
+    #333 50%,
+    #eee 75%,
+    #333 75%
+  );
+  padding-bottom: 30px;
+}
+.home-container {
+  padding-top: 70px;
+}
+ul {
+  cursor: pointer;
+}
+a {
+  background-color: transparent;
+}
+
+nav ul .activated {
+  background-color: #ffd600;
+}
+nav ul li a {
+  color: black;
+}
+nav ul li:hover a {
+  background-color: #ffd600;
+}
+.pagination {
+  margin-bottom: 0;
+}

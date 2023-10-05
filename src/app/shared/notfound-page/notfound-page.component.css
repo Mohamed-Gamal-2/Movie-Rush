@@ -1,0 +1,23 @@
+section {
+  background: radial-gradient(
+    circle at 100%,
+    #333,
+    #333 50%,
+    #eee 75%,
+    #333 75%
+  );
+}
+.movies-section {
+  padding-top: 70px;
+  min-height: calc(100vh - 157px);
+}
+.TV-section {
+  min-height: calc(100vh - 157px);
+}
+.description {
+  color: #cacaca;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}

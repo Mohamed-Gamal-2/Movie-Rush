@@ -1,0 +1,22 @@
+<section
+  class="d-flex justify-content-center align-items-center TV-section flex-column"
+>
+  <div>
+    <i class="fa-regular fa-face-sad-tear fa-10x" style="color: #cacaca"></i>
+  </div>
+  <div class="description mt-3">
+    <h1>404 : The page you requested is not found</h1>
+    <h3 class="text-center">Would you like to browse back?!</h3>
+  </div>
+  <div>
+    <button type="button" class="btn btn-outline-warning me-3">
+      <a [routerLink]="['/home']">Go back to home</a>
+    </button>
+    <button type="button" class="btn btn-outline-warning me-3">
+      <a [routerLink]="['/movies']">Browse movies</a>
+    </button>
+    <button type="button" class="btn btn-outline-warning">
+      <a [routerLink]="['/tvshows']">Browse TV shows</a>
+    </button>
+  </div>
+</section>

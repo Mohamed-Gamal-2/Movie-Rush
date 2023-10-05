@@ -1,0 +1,16 @@
+.movies-section {
+  padding-top: 70px;
+}
+.TV-section {
+  padding-top: 70px;
+}
+.description {
+  color: #cacaca;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.hideall {
+  height: calc(100vh - 157px);
+}

@@ -1,0 +1,70 @@
+section {
+  min-height: calc(100vh - 157px);
+  position: relative;
+}
+.background-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(10px);
+  opacity: 0.5;
+  background-attachment: fixed;
+}
+.background-image2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(10px);
+  opacity: 0.5;
+  background-image: url(../../../assets/images/background.jpg);
+  background-attachment: fixed;
+}
+.poster-contianer {
+  min-height: calc(100vh - 157px);
+}
+
+.movie-poster {
+  max-height: 450px;
+  border: 4px solid white;
+}
+.main-body {
+  min-height: calc(100vh - 157px);
+  color: white;
+}
+.right-section {
+  padding-top: 3rem;
+}
+
+.votes {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.badge {
+  background-color: transparent;
+  border: 2px solid white;
+}
+
+.btn-div {
+  margin-top: 5rem;
+}
+.recommendedMovies {
+  margin-top: 3rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}

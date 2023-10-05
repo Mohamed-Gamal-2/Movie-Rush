@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+.nav-container {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  border-bottom: white solid 2px;
+}
+a {
+  display: inline-block;
+  outline: none;
+}
+.nav-link {
+  outline: none;
+}
+.nav-link:focus {
+  outline: none !important;
+}
+
+li a,
+div a {
+  color: white !important;
+}
+.counter {
+  color: white;
+  position: absolute;
+  top: -0.3rem;
+  right: 0;
+}
+.nav-item {
+  position: relative;
+}
+.active-route {
+  border-left: 4px #4d9ff8 solid;
+  border-radius: 50%;
+}

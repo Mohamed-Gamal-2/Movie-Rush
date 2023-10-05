@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+a {
+  text-decoration: none;
+}
+section {
+  width: 100%;
+  background-image: linear-gradient(to right, #333 0%, #333 50%, #eee);
+}
+
+.head {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #ffd600;
+}
+
+.social-media a {
+  transition: 0.7s;
+}
+.social-media a:hover {
+  transform: scale(1.2);
+}

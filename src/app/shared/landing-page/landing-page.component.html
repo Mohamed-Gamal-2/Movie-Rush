@@ -1,0 +1,58 @@
+<section>
+  <div class="back-ground"></div>
+  <div class="container main-body">
+    <div>
+      <h1 class="text-center title">Movie Rush</h1>
+      <h2 class="text-center motto">
+        Indulge in a Sweet Cinematic Adventure with
+        <span class="name">Movie Rush!</span>
+      </h2>
+    </div>
+    <div class="search-area">
+      <div class="Search-bootstrap">
+        Are you looking for something Specific?
+      </div>
+      <div class="Search d-flex align-items-center w-100">
+        <span
+          class="search-icon d-flex justify-content-center align-items-center"
+        >
+          <i class="fa-solid fa-magnifying-glass fa-2x" style="color: #ffffff">
+          </i>
+        </span>
+        <span class="search-input mt-2">
+          <input
+            type="text"
+            name="searchInput"
+            class="searchInput"
+            placeholder="Tell us What are you looking for..."
+            [(ngModel)]="searchKey"
+            (input)="searchonInput()"
+          />
+        </span>
+      </div>
+      <div class="results mt-2" *ngIf="searchKey">
+        <div *ngFor="let result of SearchedMovies">
+          <span>
+            <img
+              [src]="imgPrefix + result.poster_path"
+              [alt]="result.title"
+              class="movie-poster me-3"
+            />
+          </span>
+          <span>
+            <a [routerLink]="['/movies', result.id]">{{
+              result.original_title
+            }}</a>
+          </span>
+          <hr />
+        </div>
+        <div class="forward" (click)="next()">
+          <i class="fa-solid fa-angles-right" style="color: #000000"></i>
+        </div>
+        <div class="backward" (click)="previous()" *ngIf="counter > 1">
+          <i class="fa-solid fa-angles-left" style="color: #000000"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

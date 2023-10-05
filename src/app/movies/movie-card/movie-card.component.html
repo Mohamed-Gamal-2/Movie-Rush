@@ -1,0 +1,45 @@
+<div class="parent mb-4">
+  <div class="data">
+    <h2 class="text-center mx-auto">{{ movie.title }}</h2>
+    <div class="overview">
+      {{ movie.overview }}
+    </div>
+    <div class="rating text-center mt-3">
+      {{ movie.vote_average | number : "1.0-1" }}/10
+    </div>
+    <div class="details-watchlist d-flex justify-content-evenly">
+      <div class="details-btn">
+        <span class="mx-3 details-arrow"
+          ><i class="fa-solid fa-chevron-right" style="color: #ffffff"></i
+        ></span>
+        <a [routerLink]="['/movies', movie.id]" (click)="sendID(movie.id)"
+          >More Details</a
+        >
+      </div>
+      <div class="watchlist-btn">
+        <i
+          (click)="addOrRemove(movie.id)"
+          class="fa fa-heart fa-2x"
+          [ngStyle]="{ color: inwatchlist ? '#ffd600' : '#2b2b2b' }"
+        ></i>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="movie.poster_path; then poster; else noImage"></div>
+  <ng-template #poster>
+    <div
+      class="main-card"
+      [ngStyle]="{
+          'background-image': 'url(' + imgPrefix + movie.poster_path + ')',
+        }"
+    ></div>
+  </ng-template>
+  <ng-template #noImage>
+    <div
+      class="main-card"
+      [ngStyle]="{
+          'background-image': 'url(../../assets/images/no-image.jpg)',
+        }"
+    ></div>
+  </ng-template>
+</div>

@@ -1,0 +1,42 @@
+<div class="card d-flex justify-cotent-center align-items-center mt-4">
+  <div
+    class="bg-image"
+    [ngStyle]="{
+      'background-image': 'url(' + imgPrefix + itter.backdrop_path + ')'
+    }"
+  ></div>
+  <div class="raiting d-flex align-items-center">
+    <span
+      ><i class="fa-brands fa-imdb fa-3x me-3" style="color: #ffd600"></i>
+    </span>
+    <span>
+      <i class="fa-solid fa-star fa-1x me-3" style="color: #ffd600"></i>
+    </span>
+    <span class="votes me-2"
+      >{{ itter.vote_average | number : "1.0-1" }}/10</span
+    >
+    <span>({{ itter.vote_count }})</span>
+  </div>
+  <h2
+    *ngIf="itter.original_name"
+    class="text-center"
+    [routerLink]="['/tvshows', itter.id]"
+  >
+    {{ itter.original_name }}
+  </h2>
+  <div *ngIf="itter.release_date">
+    {{ itter.release_date | date }}
+  </div>
+  <div class="overview">
+    {{ itter.overview }}
+  </div>
+  <div class="heart">
+    <div class="watchlist-btn">
+      <i
+        (click)="addOrRemove(itter.id)"
+        class="fa fa-heart fa-2x"
+        [ngStyle]="{ color: inwatchlist ? '#ffd600' : '#2b2b2b' }"
+      ></i>
+    </div>
+  </div>
+</div>

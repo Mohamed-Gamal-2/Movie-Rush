@@ -1,0 +1,90 @@
+section {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.back-ground {
+  height: 100%;
+  width: 100%;
+  background-image: url(../../../assets/images/landing.jpg);
+  background-size: cover;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.main-body {
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 80%;
+}
+* {
+  color: black;
+}
+.name {
+  color: #d60000;
+  font-weight: bold;
+}
+.Search-bootstrap {
+  font-size: 20px;
+}
+.Search {
+  position: relative;
+}
+
+.search-icon {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #4d9ff8;
+  transition: 1s;
+  position: absolute;
+  top: 8px;
+  left: 0;
+}
+.search-icon:hover {
+  background-color: #cacaca;
+}
+.searchInput {
+  width: 350px;
+  height: 50px;
+  border-radius: 2rem;
+  padding-left: 3.4rem;
+  border: none;
+}
+.searchInput:focus {
+  border: none;
+  outline: none;
+}
+.results {
+  position: absolute;
+  max-height: 200px;
+  overflow-y: scroll;
+  width: 350px;
+  padding-top: 2rem;
+}
+
+.movie-poster {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+a {
+  text-decoration: none;
+}
+.forward {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.backward {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
